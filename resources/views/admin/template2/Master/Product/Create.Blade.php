@@ -43,8 +43,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-
-                    <form class="form-horizontal form-label-left" action="CategoriesStore" method="POST">
+                    <form class="form-horizontal form-label-left" action="ProductStore" method="POST">
                       
                       {{ csrf_field() }}
 
@@ -52,31 +51,21 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="categoriesname"> Category Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-
-                          <select name="categories" class="form-control" id="categoriesname">
-                                             
-                                             @foreach($categories as $c)
-                                              <tr>
-                                                <td>{{ $c -> CATEGORY_NAME }}</td>
-                                              </tr>
-                                             @endforeach
-
-                                             <option>Category Name</option>
-                            </select>
-                          <!--
-                          <input id="categoriesname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="categoriesname" placeholder="Masukan Kategori" required="required" 
-                          type="text">
-                        -->
+                         
+                          <select name="categoriesid" class="form-control" id="categoriesid">
+                                           @foreach($categories as $c)
+                                           <option value="{{ $c -> CATEGORY_ID }}">{{ $c -> CATEGORY_NAME }}</option>
+                                           @endforeach                           
+                          </select>
                         </div>
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="produkname"> Produk Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="productname"> Produk Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="produkname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="produkname" placeholder="Masukan Nama Produk" required="required" 
+                          <input id="productname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="productname" placeholder="Masukan Nama Produk" required="required" 
                           type="text">
                         </div>
                       </div>
@@ -102,7 +91,7 @@
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="explanation"> Explanation <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="explanation"> Explanation <span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <textarea class="resizable_textarea form-control" id="explanation" name="explanation"
@@ -114,17 +103,14 @@
                       
 
                       <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button id="submit" value="SimpanData" type="submit" class="btn btn-success">Submit</button>
+                        <div class="form-group">
+                          <div class="col-md-6 col-md-offset-3">
+                            <button type="submit" class="btn btn-primary">Cancel</button>
+                            <button id="submit" value="SimpanData" type="submit" class="btn btn-success">Submit</button>
+                          </div>
                         </div>
                       </div>
-                </div>
           
-            </div>
-              </div>
-            </div>
                     </form>
                   </div>
                 </div>
@@ -136,6 +122,4 @@
           </div>
         </div>
         <!-- end page contentc-->
-
-
-        @endsection
+@endsection

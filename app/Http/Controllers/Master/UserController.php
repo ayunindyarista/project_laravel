@@ -15,7 +15,8 @@ class UserController extends Controller
     public function index()
     {
         //
-        return "ini Halaman Index";
+
+        //return "ini Halaman Index";
     }
 
     /**
@@ -26,7 +27,8 @@ class UserController extends Controller
     public function create()
     {
         //
-        return "ini Halaman Create";
+        return view("master/category/create")
+        //return "ini Halaman Create";
     }
 
     /**

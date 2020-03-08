@@ -4,7 +4,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Form Customer</h3>
+                <h3>Form User</h3>
               </div>
 
               <div class="title_right">
@@ -44,36 +44,26 @@
                   </div>
                   <div class="x_content">
 
-                    <form class="form-horizontal form-label-left" action="CustomerStore" method="POST">
+                    <form class="form-horizontal form-label-left" action="CategoriesStore" method="POST">
                       
                       {{ csrf_field() }}
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="firstname"> First Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="firtsname"> First Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="firstname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="firstname" placeholder="Masukan Nama Depan" required="required" 
+                          <input id="firtsname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="firtsname" placeholder="Masukan Fist Name" required="required" 
                           type="text">
                         </div>
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lasttname"> Last Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lastsname"> Last Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="lastname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="lastname" placeholder="Masukan Nama Belakang" required="required" 
-                          type="text">
-                        </div>
-                      </div>
-
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone"> No Telpon <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="phone" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="phone" placeholder="Enter Your Number : 081815xxxxxx" required="required" 
+                          <input id="lastsname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="lastsname" placeholder="Masukan Last Name" required="required" 
                           type="text">
                         </div>
                       </div>
@@ -83,47 +73,37 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="email" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="email" placeholder="ayu nindya@gmail.com" required="required" 
+                          data-validate-words="2" name="email" required="required" 
                           type="email">
                         </div>
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="street"> Alamat <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone"> No Telpon <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="street" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="street" required="required" 
+                          <input id="phone" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="phone" required="required" 
                           type="text">
                         </div>
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="city"> Kota <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password"> Password <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="city" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="city" required="required" 
-                          type="text">
+                          <input id="password" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="password" required="required" 
+                          type="password">
                         </div>
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="state"> Negara <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="jobstatus"> Status Job <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="state" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="state" required="required" 
-                          type="text">
-                        </div>
-                      </div>
-
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="zipcode"> Kode Zip <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="zipcode" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="zipcode" required="required" 
+                          <input id="jobstatus" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="jobstatus" required="required" 
                           type="text">
                         </div>
                       </div>
@@ -135,13 +115,21 @@
                           <button id="submit" value="SimpanData" type="submit" class="btn btn-success">Submit</button>
                         </div>
                       </div>
+                </div>
+               
+            </div>
+              </div>
+            </div>
                     </form>
                   </div>
                 </div>
               </div>
             </div>
-            </div>
 
+
+            </div>
           </div>
         </div>
+        <!-- end page contentc-->
+
         @endsection

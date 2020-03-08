@@ -17,6 +17,7 @@
                         <li><a href="CategoriesCreate">Form Categori</a></li>
                         <li><a href="CustomerCreate">Form Customer</a></li>
                         <li><a href="ProductCreate">Form Product</a></li>
+                        <li><a href="UserCreate">Form User</a></li>
                       </ul>
 
                       <li><a><i class="fa fa-edit"></i> Transaksi <span class="fa fa-chevron-down"></span></a>
@@ -47,7 +48,7 @@
                        <ul class="nav child_menu">
                          <li><a href="CategoriesIndex">Tabel Index Categories</a></li>
                          <li><a href="CustomerIndex">Tabel Index Customer</a></li>
-                         <li><a href="#">Tabel Index Produk</a></li>
+                         <li><a href="ProductIndex">Tabel Index Produk</a></li>
                          <li><a href="#">Tabel Index User</a></li>
                        </ul>
                      </li>

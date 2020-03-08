@@ -64,20 +64,22 @@ Route::get('CategoriesCreate', 'Master\CategoriesController@create');
 Route::post('CategoriesStore', 'Master\CategoriesController@store');
 Route::get('CategoriesIndex', 'Master\CategoriesController@index');
 Route::get('CategoriesEdit{id}', 'Master\CategoriesController@edit');
-Route::post('CategoriesUpdate', 'Master\CategoriesControlle@update');
-Route::get('Categories/Destroy', 'Master\CategoriesController@destroy');
+Route::post('CategoriesUpdate', 'Master\CategoriesController@update');
+Route::get('CategoriesDestroy{id}', 'Master\CategoriesController@destroy');
 
 Route::get('CustomerCreate', 'Master\CustomerController@create');
 Route::post('CustomerStore', 'Master\CustomerController@store');
 Route::get('CustomerIndex', 'Master\CustomerController@index');
-Route::get('Customer/Edit', 'Master\CustomerController@edit');
-Route::get('Customer/Destroy', 'Master\CustomerController@destroy');
+Route::get('CustomerEdit{id}', 'Master\CustomerController@edit');
+Route::post('CustomerUpdate', 'Master\CustomerController@update');
+Route::get('CustomerDestroy{id}', 'Master\CustomerController@destroy');
 
 Route::get('ProductCreate', 'Master\ProductController@create');
 Route::post('ProductStore', 'Master\ProductController@store');
 Route::get('ProductIndex', 'Master\ProductController@index');
-Route::get('Product/Edit', 'Master\ProductController@edit');
-Route::get('Product/Destroy', 'Master\ProductController@destroy');
+Route::get('ProductEdit{id}', 'Master\ProductController@edit');
+Route::post('ProductUpdate', 'Master\ProductController@update');
+Route::get('ProductDestroy{id}', 'Master\ProductController@destroy');
 
 Route::get('CustomerCreate', 'Master\CustomerController@create');
 Route::post('CustomerStore', 'Master\CustomerController@store');
@@ -85,10 +87,10 @@ Route::get('CustomerIndex', 'Master\CustomerController@index');
 Route::get('Customer/Edit', 'Master\CustomerController@edit');
 Route::get('Customer/Destroy', 'Master\CustomerController@destroy');
 
-Route::get('User/Create', 'Master\UserController@create');
-Route::get('User/Index', 'Master\UserController@index');
-Route::get('User/Edit', 'Master\UserController@edit');
-Route::get('User/Destroy', 'Master\UserController@destroy');
+Route::get('UserCreate', 'Master\UserController@create');
+Route::get('UserIndex', 'Master\UserController@index');
+Route::get('UserEdit', 'Master\UserController@edit');
+Route::get('UserDestroy', 'Master\UserController@destroy');
 
 Route::get('Sales/Create', 'Transaksi\SalesController@create');
 Route::get('Sales/Index', 'Transaksi\SalesController@index');

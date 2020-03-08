@@ -22,6 +22,9 @@ class CategoriesController extends Controller
 
         //mengambil data dari table pegawai
         $categories = DB::table('categories')->get();
+
+        
+
         //print_r($categories);
         //mengirim data categories ke view
        return view('admin/template2/Master/Categories/Index',['categories' => $categories]);
@@ -107,10 +110,10 @@ class CategoriesController extends Controller
     public function update(Request $request)
     {
         //
-        DB::table('categories')->where('CATEGORY_ID', $request->id)->update([
+        DB::table('categories')->where('CATEGORY_ID', $request->categoriesid)->update([
             'CATEGORY_NAME' => $request->categoriesname]);
 
-        return redirect('CategoriesCreate');
+        return redirect('CategoriesIndex');
     }
 
     /**
@@ -122,7 +125,9 @@ class CategoriesController extends Controller
     public function destroy($id)
     {
         //
+        DB::table('categories')->where('CATEGORY_ID',$id)->delete();
+        return redirect('CategoriesIndex');
         //return "ini Halaman Destroy";
-        return view('Master/Categories/Destroy');
+       // return view('Master/Categories/Destroy');
     }
 }

@@ -48,6 +48,7 @@
                           <th>City</th>
                           <th>State</th>
                           <th>Zip Code</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
 
@@ -64,6 +65,10 @@
                           <td>{{ $c -> CITY }}</td>
                           <td>{{ $c -> STATE }}</td>
                           <td>{{ $c -> ZIP_CODE }}</td>
+                          <td>
+                            <a href="CustomerEdit{{ $c->CUSTOMER_ID }}" class="btn btn-success">Edit</a>
+                            <a href="CustomerDestroy{{ $c->CUSTOMER_ID }}" class="btn btn-danger">Delete</a>
+                          </td>
                         </tr>
                         @endforeach
                       </tbody>

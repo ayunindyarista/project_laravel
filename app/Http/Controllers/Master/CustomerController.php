@@ -49,13 +49,13 @@ class CustomerController extends Controller
         DB::table('customer')->insert([
         //'CATEGORY_ID' => $request->categoriesid,
         'FIRST_NAME' => $request->firstname,
-        'LAST_NAME' => $request->lastname,
-        'PHONE' => $request->phone,
-        'EMAIL' => $request->email,
-        'STREET' => $request->street,
-        'CITY' => $request->city,
-        'STATE' => $request->state,
-        'ZIP_CODE' => $request->zipcode
+        'LAST_NAME'  => $request->lastname,
+        'PHONE'      => $request->phone,
+        'EMAIL'      => $request->email,
+        'STREET'     => $request->street,
+        'CITY'       => $request->city,
+        'STATE'      => $request->state,
+        'ZIP_CODE'   => $request->zipcode
         ]);
         return redirect('CustomerCreate');
     }
@@ -77,10 +77,13 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
         //
-        return "ini Halaman Edit";
+        //return "ini Halaman Edit";
+        $customer = DB::table('customer')->where('CUSTOMER_ID',$id)->get();
+
+        return view('admin/template2/Master/Customer/Edit', ['customer' => $customer]);
     }
 
     /**
@@ -93,6 +96,18 @@ class CustomerController extends Controller
     public function update(Request $request, $id)
     {
         //
+        DB::table('customer')->where('CUSTOMER_ID',$request->customerid)->update([
+            'FIRST_NAME' => $request->firstname,
+            'LAST_NAME'  => $request->lastname,
+            'PHONE'      => $request->phone,
+            'EMAIL'      => $request->email,
+            'STREET'     => $request->street,
+            'CITY'       => $request->city,
+            'STATE'      => $request->state,
+            'ZIP_CODE'   => $request->zipcode
+            ]);
+
+        return redirect('CustomerIndex');
     }
 
     /**
@@ -104,6 +119,8 @@ class CustomerController extends Controller
     public function destroy()
     {
         //
-        return "ini Halaman Destroy";
+        $customer = DB::table('customer')->where('CUSTOMER_ID',$id)->delete();
+        return redirect('CustomerIndex');
+        //return "ini Halaman Destroy";
     }
 }

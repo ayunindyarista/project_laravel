@@ -39,17 +39,28 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Categories Id</th>
                           <th>Categories Name</th>
+                          <th>Product Name</th>
+                          <th>Product Price</th>
+                          <th>Product Stok</th>
+                          <th>Explanation</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        @foreach($product as $c)
+                        @foreach($product as $p)
                         <tr>
-                          <td>{{ $c -> CATEGORY_ID }}</td>
-                          <td>{{ $c -> CATEGORY_NAME }}</td>
+                          <td>{{ $p -> CATEGORY_NAME }}</td>
+                          <td>{{ $p -> PRODUCT_NAME }}</td>
+                          <td>{{ $p -> PRODUCT_PRICE }}</td>
+                          <td>{{ $p -> PRODUCT_STOCK }}</td>
+                          <td>{{ $p -> EXPLANATION }}</td>
+                          <td>
+                            <a href="ProductEdit{{ $p->PRODUCT_ID }}" class="btn btn-success">Edit</a>
+                            <a href="ProductDestroy{{ $p->PRODUCT_ID }}" class="btn btn-danger">Delete</a>
+                          </td>
                         </tr>
                         @endforeach
                       </tbody>
