@@ -27,7 +27,7 @@
                       </ul>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="SalesDetailCreate"><i class="fa fa-desktop"></i> Poin Of Sales</span></a>
                     <ul class="nav child_menu">
                       <!--
                       <li><a href="general_elements.html">General Elements</a></li>

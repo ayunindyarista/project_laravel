@@ -92,12 +92,12 @@ Route::get('UserIndex', 'Master\UserController@index');
 Route::get('UserEdit', 'Master\UserController@edit');
 Route::get('UserDestroy', 'Master\UserController@destroy');
 
-Route::get('Sales/Create', 'Transaksi\SalesController@create');
+Route::get('SalesCreate', 'Transaksi\SalesController@create');
 Route::get('Sales/Index', 'Transaksi\SalesController@index');
 Route::get('Sales/Edit', 'Transaksi\SalesController@edit');
 Route::get('Sales/Destroy', 'Transaksi\SalesController@destroy');
 
-Route::get('SalesDetail/Create', 'Transaksi\SalesDetailController@create');
+Route::get('SalesDetailCreate', 'Transaksi\SalesDetailController@create');
 Route::get('SalesDetail/Index', 'Transaksi\SalesDetailController@index');
 Route::get('SalesDetail/Edit', 'Transaksi\SalesDetailController@edit');
 Route::get('SalesDetail/Destroy', 'Transaksi\SalesDetailController@destroy');

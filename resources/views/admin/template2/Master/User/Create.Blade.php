@@ -94,7 +94,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="password" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
                           data-validate-words="2" name="password" required="required" 
-                          type="password">
+                          type="text">
                         </div>
                       </div>
 

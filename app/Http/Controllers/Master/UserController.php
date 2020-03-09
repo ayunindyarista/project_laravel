@@ -27,7 +27,7 @@ class UserController extends Controller
     public function create()
     {
         //
-        return view("master/category/create")
+        return view("admin/template2/Master/User/Create");
         //return "ini Halaman Create";
     }
 
@@ -40,6 +40,12 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        DB::table('user')->insert([
+                    //'CATEGORY_ID' => $request->categoriesid,
+                    '' => $request->categoriesname
+                    ]);
+        return redirect('CategoriesCreate');
+    }
     }
 
     /**

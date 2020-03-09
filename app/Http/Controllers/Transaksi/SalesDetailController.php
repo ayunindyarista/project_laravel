@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Transaksi;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class SalesDetailController extends Controller
 {
@@ -26,7 +27,8 @@ class SalesDetailController extends Controller
     public function create()
     {
         //
-        return "ini Halaman Create";
+        //return "ini Halaman Create";
+        return view('admin/template2/Transaksi/DetilSales/Create');
     }
 
     /**
