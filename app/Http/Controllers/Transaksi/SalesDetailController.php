@@ -86,6 +86,7 @@ class SalesDetailController extends Controller
     public function destroy()
     {
         //
-        return "ini Halaman Destroy";
+        //DB::table('categories')->where('CATEGORY_ID',$id)->delete();
+        return redirect('SalesDetailCreate');
     }
 }

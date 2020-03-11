@@ -80,7 +80,7 @@
                       <tbody>
                         <tr>
                           <td>
-                            <a class="close-link"><i class="fa fa-close">
+                            <a href="SalesDetailCreate" class="close-link"><i class="fa fa-close">
                           </td>
                           <td>Tiger Nixon</td>
                           <td width="150px"><button class="btn btn-success"> - </button><input size="2" type="text" > </input><button class="btn btn-success"> + </button></td>
@@ -93,61 +93,45 @@
                     </table>
                   </div>
                 </div>
-
+            
             <div class="x_content">
-              <form class="form-horizontal form-label-left">
-                <table id="datatable-buttons" class="table table-striped table-bordered">
-                      <thead>
-                          <tr>
-                            <td>
+              
+              <form class="form-horizontal form-label-left" >
+                <div class="col-md-6 col-sm-12 col-xs-12">
+
                               <div class="item form-group ">
                                 <div class="col-md-1 col-sm-1 col-xs-1">
                                   <label class="control-label col-md-1 col-sm-1 col-xs-1" for="categoriesname">Sub Total</label>
                                 </div>
-                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                <div class="col-md-7 col-sm-7 col-xs-7">
                                   <label class="control-label col-md-6 col-sm-6 col-xs-6" for="categoriesname">Rp 0</label>
                                 </div>
                               </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
+  
                               <div class="item form-group ">
                                 <div class="col-md-1 col-sm-1 col-xs-1">
                                   <label class="control-label col-md-1 col-sm-1 col-xs-1" for="categoriesname">Pajak (10%)</label>
                                 </div>  
-                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                <div class="col-md-7 col-sm-7 col-xs-7">
                                   <label class="control-label col-md-6 col-sm-6 col-xs-6" for="categoriesname">Rp 0</label>
                                 </div>
                               </div>
-                            </td>
 
-                            <td width="500px">
-                              <div class="col-md-1 col-sm-1 col-xs-1">
-                                <label class="control-label col-md-2 col-sm-2 col-xs-2" for="categoriesid"> Categories Id</label>
-                                    <div class="col-md-3 col-sm-3 col-xs-3">
-                                      <input id="categoriesid" class="form-control col-md-3 col-xs-3" data-validate-length-range="6" 
-                                        data-validate-words="2" name="categoriesid" readonly required="required" 
-                                        type="text">
-                                    </div>
-                              </div>
-                        </td>
-
-                          </tr>
-                          <tr>
-                            <td>
                               <div class="item form-group ">
                                 <div class="col-md-1 col-sm-1 col-xs-1">
                                   <label class="control-label col-md-1 col-sm-1 col-xs-1" for="categoriesname">Discount</label>
                                 </div>
-                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                <div class="col-md-7 col-sm-7 col-xs-7">
                                   <label class="control-label col-md-6 col-sm-6 col-xs-6" for="categoriesname">Rp 0</label>
                                 </div>
                               </div>
-                            </td>
-                          </tr>
-                  </thead>
-                </table>
+                </div>
+                              <div class="col-md-6 col-sm-12 col-xs-12">
+                              <div class="x_panel" style="width:75%;height:150px">
+                                
+                              </div>
+                            </div>
+
               </form>
             </div>
 
