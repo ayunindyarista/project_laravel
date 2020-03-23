@@ -44,7 +44,7 @@
                   </div>
                   <div class="x_content">
 
-                    <form class="form-horizontal form-label-left" action="CustomerStore" method="POST">
+                    <form class="form-horizontal form-label-left" action="/CustomerStore" method="POST">
                       
                       {{ csrf_field() }}
 
@@ -74,7 +74,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="phone" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
                           data-validate-words="2" name="phone" placeholder="Enter Your Number : 081815xxxxxx" required="required" 
-                          type="text">
+                          type="number" min="0">
                         </div>
                       </div>
 
@@ -99,31 +99,31 @@
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="city"> Kota <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="city"> Kota 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="city" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="city" required="required" 
+                          data-validate-words="2" name="city" 
                           type="text">
                         </div>
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="state"> Negara <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="state"> Negara 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="state" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="state" required="required" 
+                          data-validate-words="2" name="state" 
                           type="text">
                         </div>
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="zipcode"> Kode Zip <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="zipcode"> Kode Zip 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="zipcode" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="zipcode" required="required" 
+                          data-validate-words="2" name="zipcode"
                           type="text">
                         </div>
                       </div>

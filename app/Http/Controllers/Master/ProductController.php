@@ -58,7 +58,7 @@ class ProductController extends Controller
                     'PRODUCT_STOCK' => $request->productstock,
                     'EXPLANATION'   => $request->explanation
                     ]);
-        return redirect('ProductCreate');
+        return redirect('ProductIndex');
 
     }
 
@@ -94,7 +94,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
         DB::table('product')->where('PRODUCT_ID', $request->productid)->update([
@@ -105,7 +105,7 @@ class ProductController extends Controller
             'EXPLANATION'   => $request->explanation
             ]);
 
-        return redirect('CategoriesIndex');
+        return redirect('/ProductIndex');
          
     }
 

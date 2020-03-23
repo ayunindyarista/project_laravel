@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Master;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -17,6 +18,8 @@ class UserController extends Controller
         //
 
         //return "ini Halaman Index";
+       $user = DB::table('user')->get();
+       return view('admin/template2/Master/User/Index',['user' => $user]);
     }
 
     /**
@@ -41,11 +44,15 @@ class UserController extends Controller
     {
         //
         DB::table('user')->insert([
-                    //'CATEGORY_ID' => $request->categoriesid,
-                    '' => $request->categoriesname
+                    //'USER_ID'       => $request->categoriesname,
+                    'FIRST_NAME'    => $request->firstname,
+                    'LAST_NAME'     => $request->lastname,
+                    'EMAIL'         => $request->email,
+                    'PHONE'         => $request->phone,
+                    'PASSWORD'      => $request->password,
+                    'JOB_STATUS'    => $request->jobstatus
                     ]);
-        return redirect('CategoriesCreate');
-    }
+        return redirect('/UserIndex');
     }
 
     /**
@@ -65,10 +72,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
         //
-        return "ini Halaman Edit";
+        //return "ini Halaman Edit";
+        $user = DB::table('user')->where('USER_ID',$id)->get();
+
+        return view('admin/template2/Master/User/Edit', ['user' => $user]);
     }
 
     /**
@@ -78,9 +88,19 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
+         DB::table('user')->where('USER_ID',$request->userid)->update([
+            'FIRST_NAME' => $request->firstname,
+            'LAST_NAME'  => $request->lastname,
+            'EMAIL'      => $request->email,
+            'PHONE'      => $request->phone,
+            'PASSWORD'   => $request->password,
+            'JOB_STATUS' => $request->jobstatus
+            ]);
+
+        return redirect('/UserIndex');
     }
 
     /**
@@ -89,9 +109,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy($id)
     {
         //
-        return "ini Halaman Destroy";
+        //return "ini Halaman Destroy";
+        $user = DB::table('user')->where('User_ID',$id)->delete();
+        return redirect('/UserIndex');
     }
 }

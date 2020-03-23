@@ -45,17 +45,27 @@
                   <div class="x_content">
 
                     @foreach($product as $p)
-                    <form class="form-horizontal form-label-left" action="ProductUpdate" method="POST">
+                    <form class="form-horizontal form-label-left" action="/ProductUpdate" method="POST">
                       
                       {{ csrf_field() }}
 
                       
                       <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="productid"> Produk ID <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="productid" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="productid" placeholder="Masukan Nama Produk" required="required" 
+                          type="text" value="{{ $p->PRODUCT_ID }}" readonly>
+                        </div>
+                      </div>
+
+                      <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="categoriesid"> Categories Name </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                            <input id="categoriesid" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
                               data-validate-words="2" name="categoriesid" value="{{ $p->CATEGORY_ID }}" readonly>
-                            <!--<td>{{ $c -> CATEGORY_ID }}</td>-->
+                            
                        
                         </div>
                       </div>
@@ -77,7 +87,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
                           data-validate-words="2" name="productprice" required="required" 
-                          type="number">
+                          type="number" value="{{ $p->PRODUCT_PRICE }}">
                         </div>
                       </div>
 
@@ -87,7 +97,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="productstock" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
                           data-validate-words="2" name="productstock" required="required" 
-                          type="number">
+                          type="number" value="{{ $p->PRODUCT_STOCK }}">
                         </div>
                       </div>
 
@@ -95,7 +105,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="explanation"> Explanation <span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <textarea class="resizable_textarea form-control" id="explanation" name="explanation"
+                          <textarea class="resizable_textarea form-control" id="explanation" name="explanation" value="{{ $p->EXPLANATION }}"
                           placeholder="This text area automatically resizes its height as you fill in more text courtesy of autosize-master it out...">
                           </textarea>                       
                         </div>
@@ -110,14 +120,7 @@
                           </div>
                         </div>
                       </div>
-                      
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button id="submit" value="SimpanData" type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                      </div>
+        
                 </div>
                
             </div>

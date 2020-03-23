@@ -28,9 +28,9 @@
                   <div class="x_title">
                     
                     <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      <li><a href="ProductCreate" class="btn btn-primary">Tambahkan Data</a>
                       </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -39,6 +39,8 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
+                          <th> # </th>
+                          <th>Produk ID </th>
                           <th>Categories Name</th>
                           <th>Product Name</th>
                           <th>Product Price</th>
@@ -52,14 +54,16 @@
                       <tbody>
                         @foreach($product as $p)
                         <tr>
+                          <td scope="row">{{ $loop->iteration }}</td>
+                          <td>{{ $p -> PRODUCT_ID }}</td>
                           <td>{{ $p -> CATEGORY_NAME }}</td>
                           <td>{{ $p -> PRODUCT_NAME }}</td>
                           <td>{{ $p -> PRODUCT_PRICE }}</td>
                           <td>{{ $p -> PRODUCT_STOCK }}</td>
                           <td>{{ $p -> EXPLANATION }}</td>
                           <td>
-                            <a href="ProductEdit{{ $p->PRODUCT_ID }}" class="btn btn-success">Edit</a>
-                            <a href="ProductDestroy{{ $p->PRODUCT_ID }}" class="btn btn-danger">Delete</a>
+                            <a href="/ProductEdit{{ $p->PRODUCT_ID }}" class="btn btn-success">Edit</a>
+                            <a href="/ProductDestroy{{ $p->PRODUCT_ID }}" class="btn btn-danger">Delete</a>
                           </td>
                         </tr>
                         @endforeach

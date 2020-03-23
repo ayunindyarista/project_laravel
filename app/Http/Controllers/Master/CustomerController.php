@@ -57,7 +57,7 @@ class CustomerController extends Controller
         'STATE'      => $request->state,
         'ZIP_CODE'   => $request->zipcode
         ]);
-        return redirect('CustomerCreate');
+        return redirect('/CustomerIndex');
     }
 
     /**
@@ -93,7 +93,7 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
         DB::table('customer')->where('CUSTOMER_ID',$request->customerid)->update([
@@ -107,7 +107,7 @@ class CustomerController extends Controller
             'ZIP_CODE'   => $request->zipcode
             ]);
 
-        return redirect('CustomerIndex');
+        return redirect('/CustomerIndex');
     }
 
     /**
@@ -116,7 +116,7 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy($id)
     {
         //
         $customer = DB::table('customer')->where('CUSTOMER_ID',$id)->delete();

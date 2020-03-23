@@ -44,30 +44,79 @@
                   </div>
                   <div class="x_content">
 
-                    @foreach($customer as $c)
-                    <form class="form-horizontal form-label-left" action="CategoriesUpdate" method="POST">
+                    @foreach($user as $u)
+                    <form class="form-horizontal form-label-left" action="/UserUpdate" method="POST">
                       
                       {{ csrf_field() }}
 
                       
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="categoriesid"> Categories Id </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="userid"> User Id </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input id="categoriesid" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                              data-validate-words="2" name="categoriesid" value="{{ $c->CATEGORY_ID }}" readonly>
-                            <!--<td>{{ $c -> CATEGORY_ID }}</td>-->
+                           <input id="userid" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                              data-validate-words="2" name="userid" value="{{ $u->USER_ID }}" readonly>
                        
                         </div>
                       </div>
                     
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="categoriesname"> Categories Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="firstname"> First Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="categoriesname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="categoriesname" value="{{ $c->CATEGORY_NAME }}" placeholder="Masukan Kategori" required="required" 
+                          <input id="firstname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="firstname" value="{{ $u->FIRST_NAME }}" required="required" 
                           type="text">
+                        </div>
+                      </div>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lasttname"> Last Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="lastname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="lastname" required="required" 
+                          type="text" value="{{ $u->LAST_NAME }}">
+                        </div>
+                      </div>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email"> Email <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="email" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="email" required="required" 
+                          type="email" value="{{ $u->EMAIL }}">
+                        </div>
+                      </div>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone"> No Telpon <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="phone" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="phone" required="required" 
+                          type="text" value-"{{ $u->PHONE }}" min="0">
+                        </div>
+                      </div>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password"> Password <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="password" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="password" required="required" 
+                          type="text" value="{{ $u->PASSWORD }}">
+                        </div>
+                      </div>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="jobstatus"> JOB Status <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="jobstatus" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="jobstatus" required="required" 
+                          type="text" value="{{ $u->JOB_STATUS }}">
                         </div>
                       </div>
                       

@@ -45,7 +45,7 @@
                   <div class="x_content">
 
                     @foreach($customer as $c)
-                    <form class="form-horizontal form-label-left" action="CategoriesUpdate" method="POST">
+                    <form class="form-horizontal form-label-left" action="/CategoriesUpdate" method="POST">
                       
                       {{ csrf_field() }}
 

@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Transaksi;
+namespace App\Http\Controllers\pages;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 
-class SalesDetailController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,6 @@ class SalesDetailController extends Controller
     public function index()
     {
         //
-        return "ini Halaman Index";
     }
 
     /**
@@ -27,10 +25,7 @@ class SalesDetailController extends Controller
     public function create()
     {
         //
-        //return "ini Halaman Create";
-        $categories = DB::table('categories')->get();
-        
-        return view('admin/template2/Transaksi/DetilSales/Create', ['categories' => $categories]);
+        return view('admin/template2/Body');
     }
 
     /**
@@ -61,10 +56,9 @@ class SalesDetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
         //
-        return "ini Halaman Edit";
     }
 
     /**
@@ -85,10 +79,8 @@ class SalesDetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy($id)
     {
         //
-        //DB::table('categories')->where('CATEGORY_ID',$id)->delete();
-        return redirect('SalesDetailCreate');
     }
 }

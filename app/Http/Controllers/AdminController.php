@@ -29,15 +29,11 @@ class AdminController extends Controller
     }
     */
 
-    /*
+
     public function Admin2(){
       return view('admin/template2/Admin2');
     }
-    */
 
-    public function boddy(){
-      return view('admin/template2/Body');
-    }
 
     public function headerslide(){
       return view('admin/template2/HeaderSlide');
@@ -51,16 +47,12 @@ class AdminController extends Controller
       return view('admin/template2/Footer2');
     }
 
+    public function body(){
+      return view('admin/template2/Body');
+    }
+
     public function dashboard(){
-      return view('admin/template2/Admin2');
-    }
-
-    public function form(){
-      return view('admin/template2/pages/Form');
-    }
-
-    public function formcategories(){
-      return view('admin/template2.pages/FormCategories');
+      return view('admin/template2/Body');
     }
 
 }

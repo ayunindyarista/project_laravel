@@ -43,7 +43,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <form class="form-horizontal form-label-left" action="ProductStore" method="POST">
+                    <form class="form-horizontal form-label-left" action="/ProductStore" method="POST">
                       
                       {{ csrf_field() }}
 

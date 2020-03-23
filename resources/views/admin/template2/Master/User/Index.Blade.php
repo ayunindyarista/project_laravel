@@ -5,7 +5,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Form Index Category</h3>
+                <h3>Form Index User</h3>
               </div>
 
               <div class="title_right">
@@ -28,9 +28,9 @@
                   <div class="x_title">
                     
                     <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      <li><a href="/UserCreate" class="btn btn-primary">Tambahkan Data</a>
                       </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -39,21 +39,33 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Categories Id</th>
-                          <th>Categories Name</th>
+                          <th> # </th>
+                          <th>User Id</th>
+                          <th>Fist Name</th>
+                          <th>Last Name</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Password</th>
+                          <th>Job Status</th>
                           <th>Action</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        @foreach($categories as $c)
+                        @foreach($user as $u)
                         <tr>
-                          <td>{{ $c -> CATEGORY_ID }}</td>
-                          <td>{{ $c -> CATEGORY_NAME }}</td>
+                          <td scope="row">{{ $loop->iteration }}</td>
+                          <td>{{ $u -> USER_ID }}</td>
+                          <td>{{ $u -> FIRST_NAME }}</td>
+                          <td>{{ $u -> LAST_NAME }}</td>
+                          <td>{{ $u -> EMAIL }}</td>
+                          <td>{{ $u -> PHONE }}</td>
+                          <td>{{ $u -> PASSWORD }}</td>
+                          <td>{{ $u -> JOB_STATUS }}</td>
                           <td>
-                            <a href="CategoriesEdit{{ $c->CATEGORY_ID }}" class="btn btn-success">Edit</a>
-                            <a href="CategoriesDestroy{{ $c->CATEGORY_ID }}" class="btn btn-danger">Delete</a>
+                            <a href="/UserEdit{{ $u->USER_ID }}" class="btn btn-success">Edit</a>
+                            <a href="/UserDestroy{{ $u->USER_ID }}" class="btn btn-danger">Delete</a>
                           </td>
                         </tr>
                         @endforeach

@@ -44,7 +44,7 @@
                   </div>
                   <div class="x_content">
 
-                    <form class="form-horizontal form-label-left" action="CategoriesStore" method="POST">
+                    <form class="form-horizontal form-label-left" action="/UserStore" method="POST">
                       
                       {{ csrf_field() }}
 
@@ -52,8 +52,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="firtsname"> First Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="firtsname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="firtsname" placeholder="Masukan Fist Name" required="required" 
+                          <input id="firstname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="firstname" placeholder="Masukan Fist Name" required="required" 
                           type="text">
                         </div>
                       </div>
@@ -62,8 +62,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lastsname"> Last Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="lastsname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="lastsname" placeholder="Masukan Last Name" required="required" 
+                          <input id="lastname" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
+                          data-validate-words="2" name="lastname" placeholder="Masukan Last Name" required="required" 
                           type="text">
                         </div>
                       </div>
@@ -83,7 +83,7 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="phone" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" 
-                          data-validate-words="2" name="phone" required="required" 
+                          data-validate-words="2" name="phone" min="0" required="required" 
                           type="text">
                         </div>
                       </div>

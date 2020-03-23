@@ -22,7 +22,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Paymen Of Sales</small></h2>
+                    <h2>Poin Of Sales</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -45,9 +45,16 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-3" for="categoriesname"> Categories Name <span class="required">*</span>
                         </label>
                         <div class="col-md-3 col-sm-3 col-xs-3">
+                           <select name="categoriesid" class="form-control" id="categoriesid">
+                                           @foreach($categories as $c)
+                                           <option value="{{ $c -> CATEGORY_ID }}">{{ $c -> CATEGORY_NAME }}</option>
+                                           @endforeach                           
+                          </select>
+                          <!--
                           <input id="categoriesname" class="form-control col-md-3 col-xs-3" data-validate-length-range="6" 
                           data-validate-words="2" name="categoriesname" placeholder="Masukan Catgories Name" required="required" 
                           type="text">
+                        -->
                         </div>
                       </div>
 
@@ -128,7 +135,7 @@
                 </div>
                               <div class="col-md-6 col-sm-12 col-xs-12">
                               <div class="x_panel" style="width:75%;height:150px">
-                                
+                                  <label class="control-label col-md-1 col-sm-1 col-xs-1" for="categoriesname">TOTAL</label>
                               </div>
                             </div>
 
